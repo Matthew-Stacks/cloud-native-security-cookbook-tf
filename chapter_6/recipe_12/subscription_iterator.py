@@ -6,7 +6,7 @@ from azure.mgmt.resource import SubscriptionClient
 
 
 def init():
-    subprocess.run(f"terraform init", check=True, shell=True)
+    subprocess.run("terraform init", check=True, shell=True)
 
 
 def get_subscriptions():

@@ -26,10 +26,7 @@ def main(event: func.EventGridEvent):
         )
         if definition.policy_rule:
             effect = definition.policy_rule["then"]["effect"]
-            if (
-                "append" == effect or
-                "modify" == effect
-            ):
+            if effect in ["append", "modify"]:
 
                 parameters = Remediation(policy_assignment_id=policyAssignmentId)
                 result = policy_insights.remediations.create_or_update_at_subscription(

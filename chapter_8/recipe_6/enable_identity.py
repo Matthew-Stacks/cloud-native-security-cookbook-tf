@@ -15,7 +15,7 @@ def run(account_name, subscription_id):
         {"location": "westeurope", "name": account_name, "sku": {"name": "Basic"}},
         identity={"type": "SystemAssigned"},
     )
-    print("Get automation account:\n{}".format(automation_account))
+    print(f"Get automation account:\n{automation_account}")
     raise Exception()
 
 
