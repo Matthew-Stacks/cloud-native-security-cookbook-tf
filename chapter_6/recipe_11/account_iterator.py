@@ -4,7 +4,7 @@ import sys
 import boto3
 
 def init():
-  subprocess.run(f"terraform init", check=True, shell=True)
+  subprocess.run("terraform init", check=True, shell=True)
 
 def get_accounts():
   organizations = boto3.client('organizations')
